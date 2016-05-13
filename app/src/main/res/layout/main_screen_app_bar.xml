@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.traineepath.volodymyrvashchenko.traineepath.application.ui.activities.MainScreenActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/toolbar_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/info_text"
+                    android:textColor="@color/white"
+                    android:text="Trainee path"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit ="marquee_forever"
+                    android:layout_alignRight="@+id/toolbar_search"
+                    android:layout_alignEnd="@+id/toolbar_search" />
+
+                <com.traineepath.volodymyrvashchenko.traineepath.application.widgets.CustomEditText
+                    android:id="@+id/toolbar_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Начните писать"
+                    android:background="@drawable/apptheme_textfield_disabled_focused_holo_light"
+                    android:textColor="@color/strong_grey"
+                    android:layout_toLeftOf="@+id/toolbar_search_img"
+                    android:layout_toStartOf="@+id/toolbar_search_img"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp">
+vas
+                    <requestFocus />
+                </com.traineepath.volodymyrvashchenko.traineepath.application.widgets.CustomEditText>
+
+                <ImageView
+                    android:id="@+id/toolbar_search_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/channels_toolbar_search_drawable"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="11dp"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/main_screen_content" />
+
+</android.support.design.widget.CoordinatorLayout>

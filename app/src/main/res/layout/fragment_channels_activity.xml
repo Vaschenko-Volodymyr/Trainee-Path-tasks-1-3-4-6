@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/fragment_channels_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/channels_not_found_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/channels_not_found_text"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/not_found"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/channels_not_found_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="Ничего не найдено :("
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:visibility="invisible"/>
+
+        <com.traineepath.volodymyrvashchenko.traineepath.application.widgets.Fab
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/channels_toolbar_search_drawable"
+            android:windowSoftInputMode="adjustResize"
+            android:layout_margin="16dip"/>
+
+        <com.gordonwong.materialsheetfab.DimOverlayFrameLayout
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <io.codetail.widget.RevealLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|bottom"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/fab_sheet"
+                style="@style/Widget.MaterialSheetFab.Sheet">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fab_sheet_item_all"
+                        style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                        android:drawableLeft="@drawable/channel_play_native_player"
+                        android:drawableStart="@drawable/channel_play_native_player"
+                        android:text="Все" />
+
+                    <TextView
+                        android:id="@+id/fab_sheet_item_favorite"
+                        style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                        android:drawableLeft="@drawable/channel_is_favorite"
+                        android:drawableStart="@drawable/channel_is_favorite"
+                        android:text="Любимые" />
+
+                    <TextView
+                        android:id="@+id/fab_sheet_item_available"
+                        style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                        android:drawableLeft="@drawable/channels_movie"
+                        android:drawableStart="@drawable/channels_movie"
+                        android:text="Доступные" />
+
+                    <TextView
+                        android:id="@+id/fab_sheet_item_censored"
+                        style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
+                        android:drawableLeft="@drawable/tv_channel_censored"
+                        android:drawableStart="@drawable/tv_channel_censored"
+                        android:text="Каналы 18+" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </io.codetail.widget.RevealLinearLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:text="Retrieved data from activity"
+        android:layout_above="@+id/retrieved_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="28dp"
+        android:drawableBottom="@drawable/available"/>
+
+    <TextView
+        android:id="@+id/retrieved_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fdkjghsdkjg"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/fun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fcc8c8"
+        android:textSize="26sp"
+        android:paddingTop="28dp"
+        android:text="Told you i can do it :)"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/retrieved_text" />
+
+</RelativeLayout>
